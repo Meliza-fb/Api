@@ -1,8 +1,7 @@
-<<<<<<< HEAD
 .marvelDate{
   text-align: center;
 }
-=======
+
 .logo {
   width: 200px;
   height: 80px;
@@ -21,4 +20,10 @@
 .btn_login {
   margin-bottom: 10px;
 }
->>>>>>> 9728b740ec199c21b56a5209183555d062d93bea
+
+ol{
+  line-height: 300%;
+}
+li{
+  float: left;
+}
