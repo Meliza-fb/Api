@@ -17,12 +17,14 @@ btnSearch.addEventListener('click',function(){
     let content = [];
     for(let i = 0; i < marvelDescription.length; i++){//cuento mi database
       content.push(marvelDescription[i].title);//rescato los title de mki database
+      console.log(content);
   }
   $('#marvelDate').append('<ol><li>' + content + '</li></ol>');
   /*$('.imgMarvel').append('<img src="http://i.annihil.us/u/prod/marvel/i/mg/1/e0/4bb4ecb6aa5a9'  + '.jpg">')*/
  });
- });
-/*
+});
+});
+ /*
    let img = document.getElementById('imgMarvel');//llamo a mi contenedor de imagenes
    for (let j = 0; j < data.data.results.length; j++) {//recorro la API
      let title= data.data.results[j].title;//rescato los title de API
@@ -44,3 +46,5 @@ console.log(marvelDescription[i].image);
    for (let i = 0; i < data.data.results[0].thumbnail.length; i++) {
      characters.push(data.data.results[0].thumbnail[i].path);
    }*/
+
+/* fghjklñ{fghjklñfghjkl   sacarrrrrrrrrr  } */
