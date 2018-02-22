@@ -1,8 +1,8 @@
 $(document).ready(function() {
-  /*Api marvel*/
-let inputText = document.getElementById('input-text');
-let btnSearch = document.getElementById('btn-search');
-let searchedForText;
+  /* Api marvel*/
+  let inputText = document.getElementById('input-text');
+  let btnSearch = document.getElementById('btn-search');
+  let searchedForText;
 
 btnSearch.addEventListener('click',function(){
 	$('.marvelDate').empty();
@@ -44,55 +44,3 @@ console.log(marvelDescription[i].image);
    for (let i = 0; i < data.data.results[0].thumbnail.length; i++) {
      characters.push(data.data.results[0].thumbnail[i].path);
    }*/
-
-
-
-
-
-   /* Firebase*/
-   // Ingreso usuarios o logueo
-   function ingresar() {
-     console.log('diste click en Ingresar');
-     var email = document.getElementById('email').value;
-     var password = document.getElementById('password').value;
-     // console.log(email);
-     // console.log(password);
-     if (email === '' || password === '') {
-       alert('Debe Ingresar datos');
-     } else {
-       firebase.auth().signInWithEmailAndPassword(email, password)
-         .catch(function(error) {
-           // Handle Errors here.
-           var errorCode = error.code;
-           var errorMessage = error.message;
-           console.log(errorCode);
-           console.log(errorMessage);
-         // ...
-         });
-     }
-   }
-   // Registro de nuevos usuarios*/
-   function registrar() {
-   // console.log('diste click en Ingresar');
-     var email = document.getElementById('email2').value;
-     var password = document.getElementById('password2').value;
-     // console.log(email);
-     // console.log(password);
-     if (email === '' || password === '') {
-       alert('Debe Ingresar datos');
-     } else {
-       firebase.auth().createUserWithEmailAndPassword(email, password)
-         .then(function() {
-           // verificarEmail()
-         })
-         .catch(function(error) { // promesa catch, si la autentificacion no ocurre catch ejecuta una funcion con parametro e, donde e guardo 2 errores en variables
-           // Handle Errors here.
-           var errorCode = error.code;
-           var errorMessage = error.message;
-           console.log(errorCode);
-           console.log(errorMessage);
-           // ...
-         });
-       }
-     }
-});
